@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&family=Roboto+Slab:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,900&display=swap" rel="stylesheet">
+    <title>Random Message</title>
+
+</head>
+<body>
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+   
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.bg{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(https://media.istockphoto.com/id/1289064997/photo/two-hands-and-a-broken-heart-on-a-sunset-background.jpg?b=1&s=170667a&w=0&k=20&c=Nu3aHCFlk6HwxBIQhEtfVG4J_YhIJ6Lg7WXj5GdtIB0=);
+    background-size: cover;
+    background-position: center;
+   
+   
+}
+
+
+header{
+    top: 20px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+    width: 100%;
+    position: relative;
+}
+
+header h2{
+    font-size: 20px;
+    font-weight: 500;
+    color:gold;
+    letter-spacing: 1.5px;
+}
+
+
+header a{
+    font-size: 20px;
+    font-weight: 500;
+    color:greenyellow;
+    letter-spacing: 1.5px;
+}
+
+
+.align {
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+
+
+main h2{
+    font-size: 35px;
+    font-weight: 700;
+    color: aqua;
+    margin-bottom: 13px;
+    letter-spacing: 1.5px;
+}
+
+button{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 11px;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba(5, 11, 87, 0.37);
+   backdrop-filter: blur( 6px );
+   -webkit-backdrop-filter: blur( 6px );
+   border-radius: 10px;
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+   color: #fff;
+   padding: 10px 40px;
+   border-radius: 50px;
+   cursor: pointer;
+
+}
+
+button:hover{
+ background: linear-gradient(89.6deg, rgb(254, 255, 194) -0.1%, rgb(255, 210, 165) 37.7%, rgb(211, 140, 173) 101%); ;
+}
+
+main h3{
+    font-size: 35px;
+    font-weight:600;
+    letter-spacing: 1.5px;
+    color: orange;
+    margin-bottom: 13px;
+}
+
+
+#message{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+.footer{
+    text-align: center;
+    position: relative;
+    top: 55%;
+}
+
+
+.footer h3{
+    font-size: 20px;
+    font-weight: 500;
+    color:  #b57c1b;;
+}
+
+
+
+@media   only screen and  (max-width: 480px){
+   header h2{
+      font-size: 13px;
+   }
+
+   header a{
+    font-size: 13px;
+   }
+
+   #message{
+    font-size: 20px;
+   }
+   
+   main h2{
+    font-size: 30px;
+   }
+   .footer{
+    position: relative;
+    top: 37%;
+   }
+
+   .footer h3{
+    font-size: 13.5px;
+   }
+
+}
+</style>
+  <div class="bg">
+   
+   <header>
+    <h2>Decision Helper</h2>
+   <a href="#"> Click me for a Source Code</a>
+   </header>
+  <div class="align"> 
+   <main>
+      <h2>Random Generate Message!</h2>
+      <button id="btn">Click Me!😊</button>
+      <h3>Message:</h3>
+      <h1 id="message"></h1>
+   </main>
+</div>
+
+   <footer class="footer">
+    <h3>Made By: Radz💖💘 You decide any message you want </h3>
+   </footer>
+
+</div>
+
+   <script>
+    
+const btn = document.getElementById ("btn");
+const Message = document.getElementById("message");
+
+//Dammy array
+
+const Answer = [
+    "di ka mahal nun 💔",
+    "uwi kana wag kanang umasa 😭",
+    "mahal ka pa nun promise! 😒",
+    "move on na may bago nayun 😥",
+    "mas pogi/maganda kapa dun sa bago nya 😎",
+    "ginanon kaba naman 😁",
+    "kung ako yan di kita gagayanin 😄",
+    "self love ka muna hanggang ma died 😵",
+    "focus lang sa goal 😚",
+    "ichat muna kasi crush mo malay mo mag g-gym kana ngayun 😂",
+    "balikan mo malay mo gusto nya pa Ex nya😩",
+    "di mo deserve saktan 💖",
+    "i miss you na 😔",
+    "bat kasi ako pinagpalit sa 6footer 😪",
+    "pass sa tele 😶",
+    "tago now legal later 😆",
+    "pag mahal mo hindi dapat sinasaktan 🥰",
+    "tama lang sayo yan mapanakit kakasi 🤣",
+    "aral muna kasi bago landi 😆",
+    "bagsak ka ngayun Sem",
+    "wag puro siya pagastosin mo 🤭",
+    "babae na laging tama 🙃",
+    "fake love pass 🤫",
+    "aral lang mag-buti 🥰",
+    "pag di ka gwapohan tapos gf mo maganda mukang may mali 😂",
+];
+
+
+const newMessage = () => {
+
+    return Math.floor(Math.random() * Answer.length )
+}
+  
+//event listener
+
+btn.addEventListener("click", () => {
+    const count = newMessage()
+    Message.textContent = Answer[count];
+    document.getElementById("message").style.color = "red"; 
+
+});
+
+
+   </script>
+</body>
+</html>
